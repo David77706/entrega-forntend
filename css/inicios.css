@@ -1,0 +1,99 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+}
+body{
+     height: 100%;
+     width: 100%;
+     display: flex;
+     /*justify-content: center;
+     align-items: center;*/
+
+}
+#login{
+    margin: 15%;  
+    height: 20%;
+    width: 80%;
+    border: 2px solid gray;
+    border-radius: 5rem;
+    padding: 3px;
+    box-shadow: 5px 10px 10px #719ECE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    padding: 3px;
+
+}
+.grupo{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     justify-items: center;
+     
+}
+
+.usuario{
+    padding: 2px;
+    margin: 3px;
+    
+}
+
+
+.password{
+    
+    margin: 1px;
+       
+}
+.correo{
+    padding: 2px;
+    margin: 4px;
+    
+
+}
+#usuario{
+    margin-left: 14px;
+
+}
+
+#correo{
+    margin-left: 14px;
+}
+
+
+
+
+button{
+    margin-bottom: 5px;
+    padding: 5px;
+    size-adjust: 50px;
+    background-color:#db9001;
+    margin-top: 10px;
+    font-family:url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
+}
+.error{
+color: red;
+font-size: 12px;
+margin-bottom: 10px;
+text-align: center;
+}
+@media screen and(heigth:844)and(width:110) {
+   
+    body{width: 80%;}
+ 
+
+    
+}

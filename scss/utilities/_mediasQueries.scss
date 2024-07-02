@@ -1,0 +1,460 @@
+@media (min-width: 326px) and (max-width: 420px) {
+
+    #header {
+        padding-bottom: 0px;
+
+        #logo {
+            float: initial;
+            width: 250px;
+        }
+
+        #logo img {
+            width: 230px;
+        }
+
+        #info {
+            #banner {
+                height: 80px;
+
+                h1 {
+                    font-size: large;
+                }
+            }
+        }
+
+        #menu {
+            margin-left: 90px;
+        }
+    }
+
+    body {
+        .socialBar {
+            top: 60%;
+            font-size: 1rem;
+        }
+
+        .containerNos {
+            img {
+                width: 100%;
+                height: 230px;
+            }
+            .staff{
+                justify-content: center;
+            }
+        }
+
+        #mainCatalogo {
+            padding-top: 0px;
+
+            p {
+                font-size: large;
+            }
+        }
+
+        #contenedorContaco {
+            h2 {
+                font-size: 30px;
+            }
+
+            .mapa {
+                iframe {
+                    width: 95%;
+                    height: 300px;
+                }
+            }
+
+            .formulario {
+                fieldset {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 421px) and (max-width: 550px) {
+
+    #header {
+        padding-bottom: 0px;
+
+        #logo {
+            justify-content: center;
+
+        }
+
+        #logo img {
+            width: 230px;
+        }
+
+        #info {
+            #banner {
+                height: 80px;
+
+                h1 {
+                    font-size: x-large;
+                }
+            }
+        }
+
+        #menu {
+            margin-left: 90px;
+
+            .container-fluid {
+                justify-content: center;
+            }
+        }
+    }
+
+    body {
+        .socialBar {
+            top: 60%;
+            font-size: 1rem;
+        }
+
+        .containerNos {
+            img {
+                width: 100%;
+                height: 300px;
+            }
+            .staff{
+                justify-content: center;
+            }
+        }
+
+        #mainCatalogo {
+            padding-top: 0px;
+
+            p {
+                font-size: large;
+            }
+        }
+
+        #contenedorContaco {
+            h2 {
+                font-size: 40px;
+            }
+
+            .mapa {
+                iframe {
+                    width: 95%;
+                    height: 300px;
+                }
+            }
+
+            .formulario {
+                fieldset {
+                    input {
+                        width: 300px;
+                    }
+
+                    textarea {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 551px) and (max-width: 768px) {
+    #header {
+        padding-bottom: 0px;
+
+        #logo {
+            justify-content: center;
+
+        }
+
+        #logo img {
+            width: 230px;
+        }
+
+        #info {
+            #banner {
+                height: 80px;
+
+                h1 {
+                    font-size: x-large;
+                }
+            }
+        }
+
+        #menu {
+            margin-left: 90px;
+
+            .container-fluid {
+                justify-content: center;
+            }
+        }
+    }
+
+    body {
+        
+        .containerNos {  
+                     
+            img {
+                width: 100%;
+                height: 300px;
+            }
+            .staff{
+                justify-content: center;
+            }
+        }
+
+        #mainCatalogo {
+            padding-top: 0px;
+
+            p {
+                font-size: large;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+        #contenedorContaco {
+            h2 {
+                font-size: 40px;
+            }
+
+            .mapa {
+                iframe {
+                    width: 95%;
+                    height: 300px;
+                }
+            }
+
+            .formulario {
+                fieldset {
+                    input {
+                        width: 300px;
+                    }
+
+                    textarea {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 990px) {
+    #header {
+       // padding-bottom: 0px;
+
+        #logo {
+            justify-content: center;
+
+        }
+
+        #logo img {
+            width: 230px;
+        }
+
+        #info {
+            #banner {
+                height: 80px;
+
+                h1 {
+                    font-size: xx-large;
+                }
+            }
+        }
+
+        #menu {
+            margin-left: 90px;
+
+            .container-fluid {
+                justify-content: center;
+            }
+        }
+    }
+
+    body {
+        
+        .containerNos {  
+                     
+            img {                
+                height: 50%;
+            }
+            .staff{
+                justify-content: center;
+
+                #imgStaff{
+                    width: 33.333333%;                    
+                }
+                h2{
+                   font-size: 26px; 
+                }
+            }
+        }
+
+        #mainCatalogo {
+            padding-top: 0px;
+
+            p {
+                font-size: large;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+        #contenedorContaco {
+            h2 {
+                font-size: 40px;
+            }
+
+            .mapa {
+                iframe {
+                    width: 95%;
+                    height: 300px;
+                }
+            }
+
+            .formulario {
+                fieldset {
+                    input {
+                        width: 400px;
+                    }
+
+                    textarea {
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1024px) {
+    #header {
+       display: flex;
+        
+        #logo {
+            justify-content: center;
+            width: 320px;
+        }
+
+        #logo img {
+            width: 226px;
+        }
+
+        #info {
+            #banner {
+                height: 80px;
+
+                h1 {
+                    font-size: xx-large;
+                }
+            }
+        }
+
+        #menu {
+            margin-left: 90px;
+
+            .container-fluid {
+                justify-content: center;
+            }
+        }
+    }
+
+    body {
+        
+        .containerNos {  
+                     
+            img {                
+                height: 60%;
+            }
+            .staff{
+                justify-content: center;
+
+                #imgStaff{
+                    width: 33.333333%;                    
+                }
+            }
+        }
+
+        #mainCatalogo {
+            padding-top: 0px;
+
+            p {
+                font-size: large;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+        #contenedorContaco {
+            h2 {
+                font-size: 40px;
+            }
+
+            .mapa {
+                iframe {
+                    width: 95%;
+                    height: 480px;
+                }
+            }
+
+            .formulario {
+                fieldset {
+                    input {
+                        width: 400px;
+                    }
+
+                    textarea {
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 2000px) {
+    
+    #header {
+        display: flex;
+        #logo {
+            //justify-content: center;
+            width: 320px;
+        }
+
+        #logo img {
+            width: 256px;
+        }
+        #menu {
+            margin-left: 200px;
+
+            .container-fluid {
+                justify-content: center;
+            }
+        }
+
+    }
+
+    body{
+        .containerNos img {
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+}
