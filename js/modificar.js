@@ -44,7 +44,7 @@ function limpiar(){
           //grabo el valor 
           
 
-          console.log(password);
+          //console.log(password);
           limpiar();
 
       
