@@ -15,4 +15,4 @@ Gastiarena	Alejandro
 Huallpa	        Madelin 
 Tomasini	Eduardo
 Baravalle	David
-Castaño	        Jho 
+Castaño	        Jhon 
