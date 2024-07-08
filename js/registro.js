@@ -2,7 +2,7 @@ function limpiar(){
   document.getElementById("usuario").value="";
   document.getElementById("password").value="";
   document.getElementById("correo").value="";
-  document.getElementById("error-ingreso").value="";
+  document.getElementById("error-ingreso").textContent="";
 }
   
 document.addEventListener("DOMContentLoaded", () => {

@@ -3,7 +3,7 @@ function limpiar(){
     document.getElementById("usuario").value="";
     document.getElementById("password").value="";
     //document.getElementById("correo").value="";
-    document.getElementById("error-ingreso").value="";
+    document.getElementById("error-ingreso").textContent="";
   }
   //buscar usuario
    const list=JSON.parse(localStorage.getItem("users"));
