@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
       
       const usuario = form.usuario.value;
       const password = form.password.value;
+      //comparacion
       if (usuario.trim() === "" || password.trim() === "") {
         errorMessage.textContent = "Por favor ingrese el usuario y el password";
         return;
       }
+      // intancio un array o lo creo si esta vacio 
       const users = JSON.parse(localStorage.getItem("users")) || [];
       const existingUser = users.find((user) => user.usuario === usuario && user.password===password);
        

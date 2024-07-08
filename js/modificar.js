@@ -3,7 +3,7 @@ function limpiar(){
     document.getElementById("usuario").value="";
     document.getElementById("password").value="";
     //document.getElementById("correo").value="";
-    document.getElementById("error-ingreso").value="";
+    document.getElementById("error-ingreso").textContent="";
   }
   //buscar usuario
    const list=JSON.parse(localStorage.getItem("users"));
@@ -36,6 +36,7 @@ function limpiar(){
     
         const users = JSON.parse(localStorage.getItem("users")) || [];
         const existingUser = users.find((user) => user.usuario === usuario);
+        const url = "http://localhost:8080/users"
         console.log(users);
         //modifico el usuario
        if (existingUser) {
@@ -48,7 +49,8 @@ function limpiar(){
           limpiar();
 
       
-         //users.push(password);
+          //deberia ir el metodo fecht.
+
          localStorage.setItem("users", JSON.stringify(users));  
           
          errorMessage.textContent="Sea Modificado el Password";
