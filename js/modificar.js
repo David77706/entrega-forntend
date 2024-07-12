@@ -49,7 +49,7 @@ function limpiar(){
           limpiar();
 
       
-          //deberia ir el metodo fecht.
+          //deberia ir el metodo fecht.cual va en lazado con un update
 
          localStorage.setItem("users", JSON.stringify(users));  
           
