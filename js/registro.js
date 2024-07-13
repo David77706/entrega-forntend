@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       const users = JSON.parse(localStorage.getItem("users")) || [];
       const existingUser = users.find((user) => user.usuario === usuario);
-      const url = "http://localhost:8080/users"
+      const url = "http://localhost:8080/cliente"
       //condicional si existe el usuario.
      if (existingUser) {
         errorMessage.textContent = "Usario ya existe, prueba con otro";
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "iniciosesion.html";
 
     }else {
-        console.error("Error al crear el usuario ...")
+        console.log("Error al crear el usuario ...");
     }
         window.location.href = "iniciosesion.html";
       

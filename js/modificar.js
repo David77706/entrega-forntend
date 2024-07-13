@@ -16,7 +16,7 @@ function limpiar(){
       const form=document.querySelector("#registrar");
       const errorMessage = document.querySelector("#error-ingreso");
       
-      form.addEventListener("submit", (e,f) => {
+      form.addEventListener("submit", async(e,f) => {
         e.preventDefault();
         
         
@@ -36,7 +36,7 @@ function limpiar(){
     
         const users = JSON.parse(localStorage.getItem("users")) || [];
         const existingUser = users.find((user) => user.usuario === usuario);
-        const url = "http://localhost:8080/users"
+        const url = "http://localhost:8080/cliente"
         console.log(users);
         //modifico el usuario
        if (existingUser) {
@@ -50,13 +50,15 @@ function limpiar(){
 
       
           //deberia ir el metodo fecht.cual va en lazado con un update
-
-         localStorage.setItem("users", JSON.stringify(users));  
-          
-         errorMessage.textContent="Sea Modificado el Password";
-          return;
-        }
-
+          const response = await fetch(url, {
+            method: "put",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(users)
+      
+          })
+          errorMessage.textContent("Clave modificada");
+        
+       }
         
       });
     });
