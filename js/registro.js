@@ -2,7 +2,7 @@ function limpiar(){
   document.getElementById("usuario").value="";
   document.getElementById("password").value="";
   document.getElementById("correo").value="";
-  document.getElementById("error-ingreso").textContent="";
+  
 }
   
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,57 +13,70 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       
       
-      const usuario = form.usuario.value;
-      const password = form.password.value;
+      const nombre= form.usuario.value;
+      const clave = form.password.value;
       const correo = form.correo.value;
-      
+     
       // realizar las validaciones
-      if (usuario.trim() === "" || password.trim() === "") {
+      if (nombre.trim() === "" || clave.trim() === "") {
+        
         errorMessage.textContent = "Por favor ingrese el usuario y el password";
+        const responsive= await fetch("http://localhost:8080/cliente",{method:"get"});
+        personajes= await responsive.json();
+        
+        console.log(personajes);
         
         return;
       }
      
       
-      // simulacion de bd: guardar en el localstorage
-  
-      const users = JSON.parse(localStorage.getItem("users")) || [];
-      const existingUser = users.find((user) => user.usuario === usuario);
-      const url = "http://localhost:8080/cliente"
-      //condicional si existe el usuario.
-     if (existingUser) {
-        errorMessage.textContent = "Usario ya existe, prueba con otro";
-        limpiar();
-        return;
-      }
-     
+    // creo una constante con la direccion  del servidor 
+      const url = "http://localhost:8080/cliente";
+    
       //genero el json
      
       const userNew = {
-          usuario,
-          password,
+          nombre,
+          clave,
           correo,
       };
-      users.push(userNew);
+
+      
+      
+    
       //genero la comunicacion con el servidor.
 
       const response = await fetch(url, {
         method: "post",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(users)
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify(userNew)
     })
+    
+      const responsive= await fetch(url,{method:"get"});
+      personajes= await responsive.json();
       
-        //users.push(userNew);
-       // localStorage.setItem("users", JSON.stringify(users));  
+     
+
+    //consfirmo que se creo el usuario   
        if(response.ok) {
-        console.log("USUARIO CREADO ...");
-        window.location.href = "iniciosesion.html";
+
+        errorMessage.textContent="USUARIO CREADO ...";
+        limpiar();
+       
 
     }else {
-        console.log("Error al crear el usuario ...");
+        errorMessage.textContent="Error al crear el usuario ...";
     }
-        window.location.href = "iniciosesion.html";
+     
+    }
+    //genero una variable 
+    
       
-    });
-  });
-  
+     
+
+
+        //window.location.href = "iniciosesion.html";
+      
+    );
+
+});

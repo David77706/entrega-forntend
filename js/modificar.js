@@ -6,8 +6,8 @@ function limpiar(){
     document.getElementById("error-ingreso").textContent="";
   }
   //buscar usuario
-   const list=JSON.parse(localStorage.getItem("users"));
-   console.log(list);
+   //const list=JSON.parse(localStorage.getItem("users"));
+   //console.log(list);
   
 
    
@@ -22,24 +22,36 @@ function limpiar(){
         
         const usuario = form.usuario.value;
         const password = form.password.value;
-        
+
+        const url = "http://localhost:8080/cliente"
+
         
         // realizar las validacion de campos vacios 
         if (usuario.trim() === "" || password.trim() === "") {
           errorMessage.textContent = "Por favor ingrese el usuario y el password";
+          //genero una variable 
+           consulta()
+       
           
+         }
+        async function  consulta(){
+         const responsive= await fetch(url,{method: "post",
+          headers: {"Content-Type":"application/json"},
+          body: JSON.parse(userNew)});
+          user= await responsive.json();
+          console.log(user)
+
           return;
         }
-       
-        
+      
         // simulacion de bd: guardar en el localstorage
     
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-        const existingUser = users.find((user) => user.usuario === usuario);
-        const url = "http://localhost:8080/cliente"
-        console.log(users);
+        //const users = JSON.parse(localStorage.getItem("users")) || [];
+        //const existingUser = users.find((user) => user.usuario === usuario);
+        //const url = "http://localhost:8080/cliente"
+        
         //modifico el usuario
-       if (existingUser) {
+       /*if (existingUser) {
           //reemplazo el valor anterior
           existingUser.password= password;
           //grabo el valor 
@@ -49,16 +61,13 @@ function limpiar(){
           limpiar();
 
       
-          //deberia ir el metodo fecht.cual va en lazado con un update
-          const response = await fetch(url, {
-            method: "put",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(users)
+         
       
-          })
-          errorMessage.textContent("Clave modificada");
+          
+          //genero una variable 
+          
+          errorMessage.textContent("Clave modificada");*/
         
-       }
         
-      });
+      });  
     });
