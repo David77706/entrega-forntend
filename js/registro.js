@@ -52,8 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify(userNew)
     })
     
-      const responsive= await fetch(url,{method:"get"});
-      personajes= await responsive.json();
+      
       
      
 
